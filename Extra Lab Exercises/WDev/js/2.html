@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Marking up a letter.</title>
+        <meta charset = "utf-8">
+        <meta name="author" content="Samyak Maharjan">
+        
+    </head>
+    <body>
+        <button>Press me</button>
+        <script>
+            const button = document.querySelector('button');
+
+            button.onclick = function() {
+              let name = prompt('What is your name?');
+              //alert('Hello ' + name + ', nice to see you!');
+                if (name === "Samyak"){
+                    alert('Hello ' + name + ', nice to see you!');
+                }
+                else if(name === "Gaurav"){
+                    alert('Hello ' + name + ', nice to see you!');
+                }
+                else{
+                    alert('Not recognized');
+                }
+            }
+        </script>
+    </body>
+</html>

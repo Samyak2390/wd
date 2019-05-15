@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTTP and security.</title>
+        <meta charset = "utf-8">
+        <meta name="author" content="Samyak Maharjan">
+        <style>
+            section{
+                max-width: 900px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <section>
+            <img name = "slide" width=100%>
+        </section>
+        <script>
+            var i = 0;
+            var images = [];
+            var time = 3000;
+            
+            //Image List
+            images[0] = 'image1.jpg';
+            images[1] = 'image2.jpg';
+            
+            //change image
+            
+            function changeImg(){
+                document.slide.src= images[i];
+                if(i<images.length - 1){
+                    i++;
+                }
+                else{
+                    i=0;
+                }
+                setTimeout("changeImg()", time);
+                
+            }
+            
+            window.onload = changeImg();
+            
+        </script>
+        
+        
+    </body>
+</html>

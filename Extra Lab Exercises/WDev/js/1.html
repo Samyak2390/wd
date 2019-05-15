@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Practicing js</title>
+        <meta charset = "utf-8">
+        <meta name="author" content="Samyak Maharjan">
+        
+    </head>
+    <body>
+        <button>Press me</button>
+        <script>
+            const button = document.querySelector('button');
+
+            button.onclick = function() {
+              let name = prompt('What is your name?');
+              alert('Hello ' + name + ', nice to see you!');
+            }
+			
+			var one = "hello";
+			var two = " world";
+			var three = one + two;
+			document.write(three + "<br>");
+			
+			var myString = '123';
+			var myNum = Number(myString);
+			document.write(typeof myNum + "<br>");
+			
+			var myNum = 123;
+			var myString= toString(myNum);
+			document.write(typeof myString + "<br>");
+			
+			var name = "Mozilla";
+			document.write("<br>"+name.length);
+			document.write("<br>" + name[0]);
+			document.write("<br>" + name[name.length - 1]);
+			document.write("<br>" + name.indexOf("l"));
+			document.write("<br>" + name.indexOf("la"));
+			document.write("<br>" + name.indexOf("zill"));
+			document.write("<br>" + name.indexOf("vanilla"));
+			
+			if (name.indexOf("Mozilla") !== -1){
+				document.write("<br>lalalalala<br>");
+			}
+			
+			document.write(name.slice(0, 3));
+			
+			var Primus = 'My Name Is MUD';
+			document.write("<br>" +Primus.toLowerCase());
+			document.write("<br>" +Primus.toUpperCase());
+			
+        </script>
+    </body>
+</html>

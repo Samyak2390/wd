@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>validate form</title>
+        <meta charset="utf-8">
+        <style>
+            input:invalid{
+                border: 2px dashed red;
+            }
+            input:valid{
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="text">
+                Enter text: 
+                <input type = "text" id = "text" required>
+            </label>
+            <br><br>
+            <label for="pattern">
+                Enter 'apple' or 'ball'
+                <input type = "text" id = "pattern" required pattern = "apple|ball" minlength="4" maxlength="5">
+            </label>
+            <button type ="submit">Submit</button>
+        </form>
+    </body>
+</html>

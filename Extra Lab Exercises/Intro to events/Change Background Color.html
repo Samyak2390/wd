@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>valid simple form</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Press a random key:</p>
+      <p>OR</p>
+    <button>Change color</button>
+    <script>
+      var btn = document.querySelector('button');
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+      function bgChange() {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+      }
+      window.onkeypress = bgChange; 
+        btn.onclick = bgChange;
+    </script>
+  </body>
+</html>
