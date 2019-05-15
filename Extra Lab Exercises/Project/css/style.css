@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 16vh;
+    background:linear-gradient(0deg,rgba(255, 255,255,0.8),rgba(255,255,255,0.8)), url('../images/dane.jpg') repeat center;
+    font-family: 'Poppins', sans-serif;
+    background-size: contain;
+    border-bottom: #e8491d 5px solid;
+}
+
+nav .logo{
+    max-width: 200px;
+    max-height: 120px;
+}
+
+.nav-links{
+    float: right;
+}
+
+.nav-links li{
+    display: inline;
+    padding: 80px 0px 0 20px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+nav .current a{
+    color: #e8491d;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: #e8491d;
+    font-weight: bold;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #e8491d;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    body, .hidden{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .nav-links{
+        z-index: 10;
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 15vh;
+        background:linear-gradient(0deg,rgba(255, 255,255,0.8),rgba(255,255,255,0.8)), url('../images/dane.jpg') repeat center;
+        background-size: contain;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+    }
+    .nav-links li{
+        opacity: 0;
+        padding: 0px 0px 80px 20px;
+    }
+    .burger{
+        z-index: 10;
+        display: block;
+        cursor: pointer;
+    }
+}
+.burger_afterClicked{
+    position:relative;
+    right: 40px;
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: transform 0.2s ease-in;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*Showcase First*/
+
+.container{
+    width: 90%;/* Not setting it to pixels to make responsive */
+    margin: auto; /* in the middel*/
+    overflow: auto;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container > img{
+    max-width: 600px; 
+}
+
+#showcase{
+    max-width: 100%;
+    padding: 30px 0px;
+    background:linear-gradient(0deg,rgba(255, 255,255,0.69),rgba(255,255,255,1)), url('../images/showcase2.jpg') repeat -250px -250px;
+    background-size: contain;
+}
+
+.text h2{
+    text-align: center;
+}
+.text{
+    font-size: 22px;
+    max-width: 50%;
+    padding: 10px;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    padding: 20px;
+    color:#000;
+    background:linear-gradient(0deg,rgba(255, 255,255,0.8),rgba(255,255,255,0.8)), url('../images/dane.jpg') repeat center center;
+    background-size: contain;
+    text-align: center;
+    z-index: 11;
+    font-family: 'Archivo Narrow', sans-serif;
+    letter-spacing: 3px;
+}
