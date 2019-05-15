@@ -1,0 +1,10 @@
+Colors:
+
+1. contrast ratio is 4.08 : 1 for black and #008000 which fails
+2. if background color is changed to white, then the contrast ratio becomes 21: 1 which passes
+
+Semantic HTML:
+
+After testing with ChromeVox:
+1. While navigating with tab button, it was able to find four items in the list and search bar but, skipped all the contents(Headings and Paragraphs) after that until it reached audio controls then continued to class 'secondary' with heading - 'Related'.
+2. Heading and paragraphs were not distinguished while reading.

@@ -1,0 +1,172 @@
+/* General setup */
+@font-face {
+    font-family: 'crimson_textregular';
+    src: url('fonts/crimsontext-regular-webfont.woff2') format('woff2'),
+         url('fonts/crimsontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'oswaldmedium';
+    src: url('fonts/oswald-medium-webfont.woff2') format('woff2'),
+         url('fonts/oswald-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_mono_mediumregular';
+    src: url('fonts/robotomono-medium-webfont.woff2') format('woff2'),
+         url('fonts/robotomono-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*{
+  box-sizing: border-box;
+    //font-size: 10px;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+    line-height:1.5;/*line height in body and between lists?*/
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float:left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+/*Fonts*/
+h1{
+    font-family:'roboto_mono_mediumregular';
+    letter-spacing:5px;
+    text-align:center;
+    //font-size: 20px;
+}
+
+h2{
+    font-family: 'oswaldmedium';
+    letter-spacing:1px;
+    //font-size: 15px;
+}
+
+p, ul, ol{
+    font-family: 'crimson_textregular';
+    //font-size: 15px;
+    word-spacing:1.5px;
+    line-height:1.5;
+}
+
+p{
+    text-indent:20px;
+}
+/*Links*/
+a{
+    outline:none;
+}
+
+a:link{
+    color:chocolate;
+}
+
+a:visited{
+    color:#D7674F  ;
+}
+
+a:focus{
+    color:sandybrown; 
+    text-decoration: none;
+    outline:none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #C70039;
+}
+
+a:active{
+    border-bottom:1px solid;
+    color: crimson;
+}
+
+a[href*="http"] {
+  background: url('external-link-52.png') no-repeat 100% 0;
+  background-size: 15px 15px;
+  padding-right:19px;
+}
+
+/*Menu*/
+
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav li:hover, nav a:hover{
+    background-color: #a66;
+    color: #fff;
+}
+
+nav li{
+    border: 2px solid #a66;
+    text-align: center;
+    list-style-type: none;
+    margin:15px;
+    border-radius:40px;
+    padding: 8px 16px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

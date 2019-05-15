@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTTP and security.</title>
+        <meta charset = "utf-8">
+        <meta name="author" content="Samyak Maharjan">
+        <style>
+            article{
+                max-width: 800px; 
+                margin: 50px auto; 
+                background-color: oldlace; 
+                padding: 40px 100px;
+            }
+            h1{
+                width: 250px;
+                margin: 0px auto 30px;
+            }
+            h4{
+                padding-top: 13px;
+                margin: 0;
+            }
+            
+            article dl dd{
+                font-family: century;
+                font-size: 17px;
+            }
+            dt{
+                padding-top: 15px;
+            }
+            
+            dd>p {
+                padding-top: 2px;
+                margin: 0;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <article>
+            <h1>HTTP and Security:</h1>
+            <dl>
+                <dt><h3>1. What is the Hypertext Transfer Protocol (HTTP)?</h3></dt>
+                <dd>
+                    HTTP is a set of rules working at application layer of TCP/IP protocol that allows transmission of documents (e.g. HTML) between client and web server.
+                </dd>
+                
+                <dt><h3>2. Why is HTTP called a stateless protocol?</h3></dt>
+                <dd>
+                    HTTP is a stateless protocol, means that server doesn't retain any information about its client's requests and connection between them exists until transaction is being conducted.
+
+                </dd>
+                
+                <dt><h3>3. Describe the three phases of establishing a session using client-server protocols such as HTTP.</h3></dt>
+                <dd>
+                    Three phases of HTTP sessions consist:
+                    
+                    <h4>(i) Establishing a connection</h4>
+                    <p>First, the client establishes the connection to transport layer (TCP) The default port for HTTP servers on a computer is 80.</p>
+                    
+                    <h4>(ii) Sending a client request</h4>
+                    <p>After the connection is established, client sends a request consisting of text directives, separated by CRLF (Carriage return, Line Feed). Division of CRLF contains request method followed by its parameters, HTTP header etc.</p>
+                    
+                    <h4>(iii) Response of Server</h4>
+                    <p>The server acknowledges the request and replies with a status code and other appropriate datas like HTTP headers. Status code is 200 for successful request and 404 for not found.
+                    </p>
+                    
+
+                </dd>
+                
+                <dt><h3>4. Describe the parameters on a get and post request.</h3></dt>
+                <dd>
+                    Following table describes parameters on get and post request: <br><br>
+                    <table border = "1" cellspacing="0" style="width: 100%; border: 1px solid black; text-align: center;">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>GET</th>
+                            <th>POST</th>
+                        </tr>
+                        <tr>
+                            <th>Request has body</th>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Successful response has body</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Safe</th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <th>Idempotent</th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Cacheable</th>
+                            <td>Yes</td>
+                            <td>Only if freshness information is included</td>
+                        </tr>
+                        <tr>
+                            <th>Allowed in HTML forms</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                    </table>
+                    
+                </dd>
+                
+                <dt><h3>5. What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?</h3></dt>
+                <dd>
+                    HTTP response status codes indicate if a specific HTTP request has been successfully completed. If HTTP status code is 200, it means that request was successful and 404 means that server cannot find the request resource.
+                </dd>
+                
+                <dt><h3>6. What are HTTP cookies? Give an example.</h3></dt>
+                <dd>
+                    An HTTP cookie is a piece of data that a server sends to the user's web browser that is use to confirm if two request came from the same browser. <br>
+                    Session cookies is an example of cookies.
+                </dd>
+                
+                <dt><h3>7. Why are cookies a security issue?</h3></dt>
+                <dd>
+                    Since cookies are used to identify a user and their authenticated session in web application, stealing of cookie can lead to hijacking the authenticated user's session.
+                </dd>
+                
+                <dt><h3>8. Describe session hijacking and XSS</h3></dt>
+                <dd>
+                    Session is a certain time frame dedicated for communication between two devices, two systems or two part of systems. When a session is hijacked, the attacker uses an exploit on a device and a host to disconnect that device from communication and attacker fakes its identity as the original device to receive private information from server.<br><br>
+                    Cross-site scripting or XSS are injection attacks in which malicious scripts are injected in trusted websites. The malicious script can access any cookies, session tokesns or other sensitive information retained in the browser.
+                </dd>
+                
+                <dt><h3>9. Describe Cross-site request forgery(CSRF)</h3></dt>
+                <dd>
+                    Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated mainly through email, chat or comments forum. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request.
+                </dd>
+                
+                <dt><h3>10. What are Cross-site HTTP requests (CORS) and what requests use CORS?</h3></dt>
+                <dd>
+                    Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access selected resources from a server at a different origin.<br><br>
+                    Invocations of XMLHttpRequest, Web Fonts, Images/video frames drawn to canvas uses CORS.
+        
+                </dd>
+            </dl>
+        </article>
+
+        
+    </body>
+</html>
